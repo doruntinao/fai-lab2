@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class GrupiMapper
+    public class GrupiMapper
     {
         private Grupi mGrupi;
 
@@ -42,7 +42,8 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand("GrupiInsertRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Grupi", mGrupi.emriGrupit);
-                cmd.Parameters.AddWithValue("@Kategoria", mGrupi.Kategoria);
+                cmd.Parameters.AddWithValue("@KategoriaID", mGrupi.KategoriaID);
+                cmd.ExecuteNonQuery();
             }
             finally
             {
@@ -58,7 +59,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand("GrupiInsertRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Grupi", mGrupi.emriGrupit);
-                cmd.Parameters.AddWithValue("@Kategoria", mGrupi.Kategoria);
+                cmd.Parameters.AddWithValue("@KategoriaID", mGrupi.KategoriaID);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -83,8 +84,8 @@ namespace DAL
 
                     if (rdr["Grupi"] != DBNull.Value)
                         mGrupi.emriGrupit = (string)rdr["Grupi"];
-                    if (rdr["Kategoria"] != DBNull.Value)
-                        mGrupi.Kategoria = (List<Kategoria>)rdr["Kategoria"];
+                    if (rdr["KategoriaID"] != DBNull.Value)
+                        mGrupi.KategoriaID = (int)rdr["KategoriaID"];
                 }
             }
             finally

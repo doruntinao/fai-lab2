@@ -238,24 +238,6 @@ namespace FAI_lab2.Views.Produkti {
         protected global::System.Web.UI.WebControls.Label CmimiHelpBlockLabel;
         
         /// <summary>
-        /// AssetLabel-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AssetLabel;
-        
-        /// <summary>
-        /// AssetCheckBox-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox AssetCheckBox;
-        
-        /// <summary>
         /// GrupiLabel-Steuerelement
         /// </summary>
         /// <remarks>
@@ -272,6 +254,24 @@ namespace FAI_lab2.Views.Produkti {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList GrupiDropDownList;
+        
+        /// <summary>
+        /// AssetLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AssetLabel;
+        
+        /// <summary>
+        /// AssetCheckBox-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox AssetCheckBox;
         
         /// <summary>
         /// StatusiLabel-Steuerelement

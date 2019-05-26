@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class GrupetMappers
+    public class GrupetMappers
     {
         private List<Grupi> mGrupet;
 
@@ -32,8 +32,9 @@ namespace DAL
                     g.GrupiID = (int)rdr["GrupiID"];
                     if (rdr["Grupi"] != DBNull.Value)
                         g.emriGrupit = (string)rdr["Grupi"];
-                    if (rdr["Kategoria"] != DBNull.Value)
-                        g.Kategoria = (List<Kategoria>)rdr["Kategoria"];
+                    if (rdr["KategoriaID"] != DBNull.Value)
+                        g.KategoriaID = (int)rdr["KategoriaID"];
+                    mGrupet.Add(g);
                 }
             }
             finally

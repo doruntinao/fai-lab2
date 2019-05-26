@@ -10,6 +10,6 @@ namespace BLL
     {
         public int GrupiID { get; set; }
         public string emriGrupit { get; set; }
-        public List<Kategoria> Kategoria { get; set; }
+        public int KategoriaID { get; set; }
     }
 }

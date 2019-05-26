@@ -124,6 +124,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Views\Grupi\Create.aspx" />
+    <Content Include="Views\Grupi\Delete.aspx" />
+    <Content Include="Views\Grupi\Edit.aspx" />
+    <Content Include="Views\Grupi\Index.aspx" />
     <Content Include="Views\Images\calendar.png" />
     <Content Include="Views\Produkti\Delete.aspx" />
     <Content Include="Views\Produkti\Edit.aspx" />
@@ -193,6 +197,34 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Grupi\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Grupi\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupi\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Grupi\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupi\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Grupi\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupi\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Grupi\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Produkti\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -258,7 +290,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Grupi\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

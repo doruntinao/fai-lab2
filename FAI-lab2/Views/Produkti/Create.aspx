@@ -85,17 +85,17 @@
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
-                    <asp:Label ID="AssetLabel" Text="Asset*" runat="server"></asp:Label>
-                </label>
-                <asp:CheckBox ID="AssetCheckBox" Text="A është asset?"  runat="server" />
-            </div>
-            <div class="form-group form-md-line-input">
-                <label class="col-md-3 control-label" for="form_control">
                     <asp:Label ID="GrupiLabel" Text="Grupi*" runat="server"></asp:Label>
                 </label>
                 <asp:DropDownList ID="GrupiDropDownList" DataTextField="Grupi" 
                     DataValueField="GrupiID" runat="server">
                 </asp:DropDownList> 
+            </div>
+            <div class="form-group form-md-line-input">
+                <label class="col-md-3 control-label" for="form_control">
+                    <asp:Label ID="AssetLabel" Text="Asset*" runat="server"></asp:Label>
+                </label>
+                <asp:CheckBox ID="AssetCheckBox" Text="A është asset?"  runat="server" />
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
