@@ -3,7 +3,7 @@
       <div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">
-                Produktet
+                Produkti
             </div>
             <div class="caption pull-right">
                 <ul>
@@ -37,6 +37,11 @@
                             <asp:Label ID="EmriLabel" runat="server" Text='<%# Bind("Emri") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Pershkrimi" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="PershkrimiLabel" runat="server" Text='<%# Bind("Pershkrimi") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Prodhuesi" InsertVisible="False">
                         <ItemTemplate>
                             <asp:Label ID="ProdhuesiLabel" runat="server" Text='<%# Bind("Prodhuesi") %>' />
@@ -47,6 +52,11 @@
                             <asp:Label ID="ModeliLabel" runat="server" Text='<%# Bind("Modeli") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Jetegjatesia" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="JetegjatesiaLabel" runat="server" Text='<%# Bind("Jetegjatesia") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Asset" InsertVisible="False">
                         <ItemTemplate>
                             <asp:Label ID="AssetLabel" runat="server" Text='<%# Bind("Asset") %>' />
@@ -54,12 +64,32 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Grupi" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="GrupiLabel" runat="server" Text='<%# Bind("Grupi") %>' />
+                            <asp:Label ID="GrupiLabel" runat="server" Text='<%# Bind("GrupiID") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Pershkrimi" InsertVisible="False">
+                    <asp:TemplateField HeaderText="Statusi" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="Pershkrimi" runat="server" Text='<%# Bind("Pershkrimi") %>' />
+                            <asp:Label ID="StatusiLabel" runat="server" Text='<%# Bind("Statusi") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="NrSerik" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="NrSerikLabel" runat="server" Text='<%# Bind("NrSerik") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="salvageValue" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="salvageValueLabel" runat="server" Text='<%# Bind("salvageValue") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Cmimi" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="CmimiLabel" runat="server" Text='<%# Bind("Cmimi") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Data" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="DataLabel" runat="server" Text='<%# Bind("Data1") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
                      <asp:TemplateField HeaderText="" InsertVisible="False">
@@ -88,6 +118,4 @@
             </asp:GridView>
         </div>
     </div>
-
-
 </asp:Content>

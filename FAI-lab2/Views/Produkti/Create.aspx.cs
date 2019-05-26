@@ -17,6 +17,7 @@ namespace FAI_lab2.Views.Produkti
             if (!Page.IsPostBack)
             {
                 GrupiDLL();
+                Calendar1.Visible = false;
             }
         }
 
@@ -77,13 +78,6 @@ namespace FAI_lab2.Views.Produkti
                 JetegjatesiaTextBox.Focus();
                 return;
             }
-            else if (SasiaTextBox.Text.Length == 0)
-            {
-                lblError.Visible = true;
-
-                SasiaTextBox.Focus();
-                return;
-            }
             else if (salvageValueTextBox.Text.Length == 0)
             {
                 lblError.Visible = true;
@@ -100,10 +94,12 @@ namespace FAI_lab2.Views.Produkti
                 obj.Modeli = ModeliTextBox.Text;
                 obj.Jetegjatesia = Int32.Parse(JetegjatesiaTextBox.Text);
                 obj.Asset = AssetCheckBox.Checked;
-                obj.Sasia = Int32.Parse(SasiaTextBox.Text);
-                obj.Grupi = Int32.Parse(GrupiDropDownList.SelectedItem.Value);
+                obj.GrupiID = Int32.Parse(GrupiDropDownList.SelectedItem.Value);
                 obj.Statusi = StatusiCheckBox.Checked;
-                obj.salvageValue = Int32.Parse(salvageValueTextBox.Text);
+                obj.NrSerik = NrSerikTextBox.Text;
+                obj.salvageValue = decimal.Parse(salvageValueTextBox.Text);
+                obj.Cmimi = decimal.Parse(CmimiTextBox.Text);
+                obj.Data1 = Convert.ToDateTime(DataTextBox.Text);
                 ProduktiMapper objm = new ProduktiMapper(obj);
                 objm.Insert();
                 Response.Redirect("Index.aspx");
@@ -113,6 +109,33 @@ namespace FAI_lab2.Views.Produkti
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            if (Calendar1.Visible)
+            {
+                Calendar1.Visible = false;
+            }
+            else
+            {
+                Calendar1.Visible = true;
+            }
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            DataTextBox.Text = Calendar1.SelectedDate.ToString("d");
+            Calendar1.Visible = false;
+        }
+
+        protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.IsOtherMonth)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }

@@ -58,11 +58,9 @@ namespace FAI_lab2.Views.Produkti
             {
                 Session["DeletedID"] = Convert.ToInt32(e.CommandArgument.ToString());
                 Session["PreviousPageName"] = "/Views/Produkti/" + System.IO.Path.GetFileName(Page.Request.FilePath);
-                Server.Transfer("DeleteForm.aspx");
+                Server.Transfer("Delete.aspx");
             }
         }
-
-
 
     }
 }

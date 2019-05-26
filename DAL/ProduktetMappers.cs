@@ -25,6 +25,7 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand("ProduktiSelectAll", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -40,12 +41,21 @@ namespace DAL
                         p.Modeli = (string)rdr["Modeli"];
                     if (rdr["Jetegjatesia"] != DBNull.Value)
                         p.Jetegjatesia = (int)rdr["Jetegjatesia"];
-                    if (rdr["Sasia"] != DBNull.Value)
-                        p.Sasia = (int)rdr["Sasia"];
+                    if (rdr["Asset"] != DBNull.Value)
+                        p.Asset = (bool)rdr["Asset"];
                     if (rdr["GrupiID"] != DBNull.Value)
-                        p.Grupi = (int)rdr["GrupiID"]; 
+                        p.GrupiID = (int)rdr["GrupiID"];
+                    if (rdr["Statusi"] != DBNull.Value)
+                        p.Statusi = (bool)rdr["Statusi"];
+                    if (rdr["NrSerik"] != DBNull.Value)
+                        p.NrSerik = (string)rdr["NrSerik"];
                     if (rdr["salvageValue"] != DBNull.Value)
-                        p.salvageValue = (int)rdr["salvageValue"];
+                        p.salvageValue = (decimal)rdr["salvageValue"];
+                    if (rdr["Cmimi"] != DBNull.Value)
+                        p.Cmimi = (decimal)rdr["Cmimi"];
+                    if (rdr["Data1"] != DBNull.Value)
+                        p.Data1 = (DateTime)rdr["Data1"];
+                    mProduktet.Add(p);
                 }
             }
             finally

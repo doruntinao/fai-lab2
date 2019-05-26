@@ -9,11 +9,11 @@
                 <label class="text-center" style="width: 100%;">
                     <br />
                     <asp:Label ID="lblError" runat="server" Text="Fushat e shenjuara me (*) duhet të plotësohen!" Visible="False" CssClass="col-md-12 alert alert-danger"></asp:Label></label>
-                <br />
+                    <br />
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
-                    <asp:Label ID="nNameLabel" Text="Emri i Produktit*" runat="server"></asp:Label>
+                    <asp:Label ID="EmriLabel" Text="Emri i Produktit*" runat="server"></asp:Label>
                 </label>
                 <div class="col-md-9">
                     <asp:TextBox ID="EmriTextBox" CssClass="form-control" runat="server" Placeholder="Emri i Produktit"></asp:TextBox>
@@ -43,7 +43,19 @@
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
-                    <asp:Label ID="PershkrimiLabel" Text="Modeli*" runat="server"></asp:Label>
+                    <asp:Label ID="DataLabel" Text="Data*" runat="server"></asp:Label>
+                </label>
+                <div class="col-md-9">
+                    <asp:TextBox ID="DataTextBox" CssClass="form-control" runat="server" Placeholder="Data" Width="114px"></asp:TextBox>
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Views/Images/calendar.png" OnClick="ImageButton1_Click" />
+                    <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" OnDayRender="Calendar1_DayRender"></asp:Calendar>
+                    <div class="form-control-focus"></div>
+                    <asp:Label ID="DataHelpBlockLabel" Text="Caktoni Daten" runat="server" CssClass="help-block"></asp:Label>
+                </div>
+            </div>
+            <div class="form-group form-md-line-input">
+                <label class="col-md-3 control-label" for="form_control">
+                    <asp:Label ID="PershkrimiLabel" Text="Pershkrimi*" runat="server"></asp:Label>
                 </label>
                 <div class="col-md-9">
                     <asp:TextBox ID="PershkrimiTextBox" CssClass="form-control" runat="server" Placeholder="Pershkrimi"></asp:TextBox>
@@ -63,26 +75,26 @@
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
+                    <asp:Label ID="CmimiLabel" Text="Cmimi*" runat="server"></asp:Label>
+                </label>
+                <div class="col-md-9">
+                    <asp:TextBox ID="CmimiTextBox" CssClass="form-control" runat="server" Placeholder="Cmimi"></asp:TextBox>
+                    <div class="form-control-focus"></div>
+                    <asp:Label ID="CmimiHelpBlockLabel" Text="Shkruani Cmimin" runat="server" CssClass="help-block"></asp:Label>
+                </div>
+            </div>
+            <div class="form-group form-md-line-input">
+                <label class="col-md-3 control-label" for="form_control">
                     <asp:Label ID="AssetLabel" Text="Asset*" runat="server"></asp:Label>
                 </label>
                 <asp:CheckBox ID="AssetCheckBox" Text="A është asset?"  runat="server" />
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
-                    <asp:Label ID="SasiaLabel" Text="Sasia*" runat="server"></asp:Label>
-                </label>
-                <div class="col-md-9">
-                    <asp:TextBox ID="SasiaTextBox" CssClass="form-control" runat="server" Placeholder="Sasia"></asp:TextBox>
-                    <div class="form-control-focus"></div>
-                    <asp:Label ID="SasiaHelpBlockLabel" Text="Shkruani sasinë e produkteve" runat="server" CssClass="help-block"></asp:Label>
-                </div>
-            </div>
-            <div class="form-group form-md-line-input">
-                <label class="col-md-3 control-label" for="form_control">
                     <asp:Label ID="Label1" Text="Grupi*" runat="server"></asp:Label>
                 </label>
                 <asp:DropDownList ID="GrupiDropDownList" DataTextField="Grupi" 
-                DataValueField="GrupiID" runat="server">
+                    DataValueField="GrupiID" runat="server">
                 </asp:DropDownList> 
             </div>
             <div class="form-group form-md-line-input">
@@ -90,6 +102,16 @@
                     <asp:Label ID="StatusiLabel" Text="Statusi*" runat="server"></asp:Label>
                 </label>
                  <asp:CheckBox ID="StatusiCheckBox" Text="A është duke u përdorur?"  runat="server" />
+            </div>
+            <div class="form-group form-md-line-input">
+                <label class="col-md-3 control-label" for="form_control">
+                    <asp:Label ID="NrSerikLabel" Text="NrSerik*" runat="server"></asp:Label>
+                </label>
+                <div class="col-md-9">
+                    <asp:TextBox ID="NrSerikTextBox" CssClass="form-control" runat="server" Placeholder="NrSerik"></asp:TextBox>
+                    <div class="form-control-focus"></div>
+                    <asp:Label ID="NrSerikHelpBlockLabel" Text="Shkruani salvage value të produktit" runat="server" CssClass="help-block"></asp:Label>
+                </div>
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">

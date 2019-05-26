@@ -34,10 +34,10 @@ namespace FAI_lab2.Views.Produkti
             ModeliTextBox.Text = ex.Modeli;
             JetegjatesiaTextBox.Text = ex.Jetegjatesia.ToString();
             AssetCheckBox.Checked = ex.Asset;
-            SasiaTextBox.Text = ex.Sasia.ToString();
-            GrupiDropDownList.SelectedValue = ex.Grupi.ToString();
+            GrupiDropDownList.SelectedValue = ex.GrupiID.ToString();
             StatusiCheckBox.Checked = ex.Statusi;
             salvageValueTextBox.Text = ex.salvageValue.ToString();
+            CmimiTextBox.Text = ex.Cmimi.ToString();
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -77,13 +77,6 @@ namespace FAI_lab2.Views.Produkti
                 JetegjatesiaTextBox.Focus();
                 return;
             }
-            else if (SasiaTextBox.Text.Length == 0)
-            {
-                lblError.Visible = true;
-
-                SasiaTextBox.Focus();
-                return;
-            }
             else if (salvageValueTextBox.Text.Length == 0)
             {
                 lblError.Visible = true;
@@ -105,10 +98,12 @@ namespace FAI_lab2.Views.Produkti
                 ex.Modeli = ModeliTextBox.Text;
                 ex.Jetegjatesia = Int32.Parse(JetegjatesiaTextBox.Text);
                 ex.Asset = AssetCheckBox.Checked;
-                ex.Sasia = Int32.Parse(SasiaTextBox.Text);
-                ex.Grupi = Int32.Parse(GrupiDropDownList.DataValueField);
+                ex.NrSerik = NrSerikTextBox.Text;
+                ex.GrupiID = Int32.Parse(GrupiDropDownList.DataValueField);
                 ex.Statusi = StatusiCheckBox.Checked;
-                ex.salvageValue = Int32.Parse(salvageValueTextBox.Text);
+                ex.salvageValue = decimal.Parse(salvageValueTextBox.Text);
+                ex.Cmimi = decimal.Parse(CmimiTextBox.Text);
+                ex.Data1 = Convert.ToDateTime(DataTextBox.Text);
 
                 em.Update();
                 Response.Redirect("Index.aspx");

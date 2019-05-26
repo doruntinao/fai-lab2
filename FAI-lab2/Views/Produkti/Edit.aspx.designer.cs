@@ -31,13 +31,13 @@ namespace FAI_lab2.Views.Produkti {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// nNameLabel-Steuerelement
+        /// EmriLabel-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nNameLabel;
+        protected global::System.Web.UI.WebControls.Label EmriLabel;
         
         /// <summary>
         /// EmriTextBox-Steuerelement
@@ -112,6 +112,51 @@ namespace FAI_lab2.Views.Produkti {
         protected global::System.Web.UI.WebControls.Label ModeliHelpBlockLabel;
         
         /// <summary>
+        /// DataLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DataLabel;
+        
+        /// <summary>
+        /// DataTextBox-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DataTextBox;
+        
+        /// <summary>
+        /// ImageButton1-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        
+        /// <summary>
+        /// Calendar1-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        
+        /// <summary>
+        /// DataHelpBlockLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DataHelpBlockLabel;
+        
+        /// <summary>
         /// PershkrimiLabel-Steuerelement
         /// </summary>
         /// <remarks>
@@ -166,6 +211,33 @@ namespace FAI_lab2.Views.Produkti {
         protected global::System.Web.UI.WebControls.Label JetegjatesiaHelpBlockLabel;
         
         /// <summary>
+        /// CmimiLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CmimiLabel;
+        
+        /// <summary>
+        /// CmimiTextBox-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CmimiTextBox;
+        
+        /// <summary>
+        /// CmimiHelpBlockLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CmimiHelpBlockLabel;
+        
+        /// <summary>
         /// AssetLabel-Steuerelement
         /// </summary>
         /// <remarks>
@@ -182,33 +254,6 @@ namespace FAI_lab2.Views.Produkti {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox AssetCheckBox;
-        
-        /// <summary>
-        /// SasiaLabel-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SasiaLabel;
-        
-        /// <summary>
-        /// SasiaTextBox-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SasiaTextBox;
-        
-        /// <summary>
-        /// SasiaHelpBlockLabel-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SasiaHelpBlockLabel;
         
         /// <summary>
         /// Label1-Steuerelement
@@ -245,6 +290,33 @@ namespace FAI_lab2.Views.Produkti {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox StatusiCheckBox;
+        
+        /// <summary>
+        /// NrSerikLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NrSerikLabel;
+        
+        /// <summary>
+        /// NrSerikTextBox-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NrSerikTextBox;
+        
+        /// <summary>
+        /// NrSerikHelpBlockLabel-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NrSerikHelpBlockLabel;
         
         /// <summary>
         /// salvageValueLabel-Steuerelement

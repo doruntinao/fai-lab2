@@ -16,11 +16,13 @@ namespace BLL
         public string Prodhuesi { get; set; }
         public string Modeli { get; set; }
         public int Jetegjatesia { get; set; }
-        public Boolean Asset { get; set; }
-        public int Sasia { get; set; }
-        public int Grupi { get; set; }
-        public Boolean Statusi { get; set; }
-        public int salvageValue { get; set; }
+        public bool Asset { get; set; }
+        public int GrupiID { get; set; }
+        public bool Statusi { get; set; }
+        public string NrSerik { get; set; }
+        public decimal salvageValue { get; set; }
+        public decimal Cmimi { get; set; }
+        public DateTime Data1 { get; set; }
 
     }
 }

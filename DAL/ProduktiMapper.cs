@@ -47,10 +47,12 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Modeli", mProdukti.Modeli);
                 cmd.Parameters.AddWithValue("@Jetegjatesia", mProdukti.Jetegjatesia);
                 cmd.Parameters.AddWithValue("@Asset", mProdukti.Asset);
-                cmd.Parameters.AddWithValue("@Sasia", mProdukti.Sasia);
-                cmd.Parameters.AddWithValue("@GrupiID", mProdukti.Grupi);
+                cmd.Parameters.AddWithValue("@GrupiID", mProdukti.GrupiID);
                 cmd.Parameters.AddWithValue("@Statusi", mProdukti.Statusi);
+                cmd.Parameters.AddWithValue("@NrSerik", mProdukti.NrSerik);
                 cmd.Parameters.AddWithValue("@salvageValue", mProdukti.salvageValue);
+                cmd.Parameters.AddWithValue("@Cmimi", mProdukti.Cmimi);
+                cmd.Parameters.AddWithValue("@Data1", mProdukti.Data1);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -72,10 +74,12 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Modeli", mProdukti.Modeli);
                 cmd.Parameters.AddWithValue("@Jetegjatesia", mProdukti.Jetegjatesia);
                 cmd.Parameters.AddWithValue("@Asset", mProdukti.Asset);
-                cmd.Parameters.AddWithValue("@Sasia", mProdukti.Sasia);
-                cmd.Parameters.AddWithValue("@GrupiID", mProdukti.Grupi);
+                cmd.Parameters.AddWithValue("@GrupiID", mProdukti.GrupiID);
                 cmd.Parameters.AddWithValue("@Statusi", mProdukti.Statusi);
+                cmd.Parameters.AddWithValue("@NrSerik", mProdukti.NrSerik);
                 cmd.Parameters.AddWithValue("@salvageValue", mProdukti.salvageValue);
+                cmd.Parameters.AddWithValue("@Cmimi", mProdukti.Cmimi);
+                cmd.Parameters.AddWithValue("@Data1", mProdukti.Data1);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -109,15 +113,19 @@ namespace DAL
                     if (rdr["Jetegjatesia"] != DBNull.Value)
                         mProdukti.Jetegjatesia = (int)rdr["Jetegjatesia"];
                     if (rdr["Asset"] != DBNull.Value)
-                        mProdukti.Asset = (Boolean)rdr["Asset"];
-                    if (rdr["Sasia"] != DBNull.Value)
-                        mProdukti.Sasia = (int)rdr["Sasia"];
+                        mProdukti.Asset = (bool)rdr["Asset"];
                     if (rdr["GrupiID"] != DBNull.Value)
-                        mProdukti.Grupi = (int)rdr["GrupiID"];
+                        mProdukti.GrupiID = (int)rdr["GrupiID"];
                     if (rdr["Statusi"] != DBNull.Value)
-                        mProdukti.Statusi = (Boolean)rdr["Statusi"];
-                 if (rdr["salvageValue"] != DBNull.Value)
-                        mProdukti.salvageValue = (int)rdr["salvageValue"];
+                        mProdukti.Statusi = (bool)rdr["Statusi"];
+                    if (rdr["NrSerik"] != DBNull.Value)
+                        mProdukti.NrSerik = (string)rdr["NrSerik"];
+                    if (rdr["salvageValue"] != DBNull.Value)
+                        mProdukti.salvageValue = (decimal)rdr["salvageValue"];
+                    if (rdr["Cmimi"] != DBNull.Value)
+                        mProdukti.Cmimi = (decimal)rdr["Cmimi"];
+                    if (rdr["Data1"] != DBNull.Value)
+                        mProdukti.Data1 = (DateTime)rdr["Data1"];
                 }
             }
             finally
