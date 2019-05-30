@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="FAI_lab2.Views.Grupi.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="FAI_lab2.Views.Punetorii.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <div class="portlet box green">
+     <div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">
-                Punetori
+                uy j3Punetoret
             </div>
             <div class="caption pull-right">
                 <ul>
                     <li>
                         <i class="fa fa-plus"></i>
-                        <asp:HyperLink ID="ShtoHyperLink" runat="server" Text="Shto Grupin" NavigateUrl="~/Views/Grupi/Create.aspx" CssClass="btn-link"></asp:HyperLink>
+                        <asp:HyperLink ID="ShtoHyperLink" runat="server" Text="Shto Punetorin" NavigateUrl="~/Views/Punetorii/Create.aspx" CssClass="btn-link"></asp:HyperLink>
                     </li>
                 </ul>
             </div>
@@ -32,22 +32,33 @@
 
                 <PagerSettings PageButtonCount="20" FirstPageText="Fillimi" LastPageText="Fundi" />
                 <Columns>
-                    <asp:TemplateField HeaderText="Grupi" InsertVisible="False">
+                    <asp:TemplateField HeaderText="Emri" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="GrupiLabel" runat="server" Text='<%# Bind("emriGrupit") %>' />
+                            <asp:Label ID="EmriLabel" runat="server" Text='<%# Bind("Emri") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Kategoria" InsertVisible="False">
+                    <asp:TemplateField HeaderText="Mbiemri" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="KategoriaLabel" runat="server" Text='<%# Bind("KategoriaID") %>' />
+                            <asp:Label ID="MbiemriLabel" runat="server" Text='<%# Bind("Mbiemri") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Gjinia" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="GjiniaLabel" runat="server" Text='<%# Bind("Gjinia") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Roli" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="RoliLabel" runat="server" Text='<%# Bind("RoliID") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                      <asp:TemplateField HeaderText="" InsertVisible="False">
                     <ItemTemplate>
                              <asp:LinkButton ID="EditButton"
                                 runat="server"
                                 CommandName="EditCommandName"
-                                CommandArgument='<%# Bind("GrupiID") %>'
+                                CommandArgument='<%# Bind("PunetoriID") %>'
                                 class="btn btn-primary btn-xs">
                                   Ndrysho
                             </asp:LinkButton>
@@ -58,7 +69,7 @@
                             <asp:LinkButton ID="DeleteButton"
                                 runat="server"
                                 CommandName="DeleteCommandName"
-                                CommandArgument='<%# Bind("GrupiID") %>'
+                                CommandArgument='<%# Bind("PunetoriID") %>'
                                 class="btn red-mint btn-xs">
                                   Fshije
                             </asp:LinkButton>
@@ -68,4 +79,6 @@
             </asp:GridView>
         </div>
     </div>
+
+
 </asp:Content>

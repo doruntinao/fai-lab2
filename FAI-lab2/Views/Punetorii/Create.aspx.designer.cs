@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FAI_lab2.Views.Grupi {
+namespace FAI_lab2.Views.Punetorii {
     
     
     public partial class Create {
@@ -31,49 +31,103 @@ namespace FAI_lab2.Views.Grupi {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// GrupiLabel control.
+        /// nNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GrupiLabel;
+        protected global::System.Web.UI.WebControls.Label nNameLabel;
         
         /// <summary>
-        /// GrupiTextBox control.
+        /// EmriTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GrupiTextBox;
+        protected global::System.Web.UI.WebControls.TextBox EmriTextBox;
         
         /// <summary>
-        /// GrupiHelpBlockLabel control.
+        /// NameHelpBlockLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GrupiHelpBlockLabel;
+        protected global::System.Web.UI.WebControls.Label NameHelpBlockLabel;
         
         /// <summary>
-        /// KategoriaLabel control.
+        /// MbiemriLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label KategoriaLabel;
+        protected global::System.Web.UI.WebControls.Label MbiemriLabel;
         
         /// <summary>
-        /// KategoriaDropDownList control.
+        /// MbiemriTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList KategoriaDropDownList;
+        protected global::System.Web.UI.WebControls.TextBox MbiemriTextBox;
+        
+        /// <summary>
+        /// MbiemriHelpBlockLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MbiemriHelpBlockLabel;
+        
+        /// <summary>
+        /// GjiniaLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GjiniaLabel;
+        
+        /// <summary>
+        /// GjiniaTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GjiniaTextBox;
+        
+        /// <summary>
+        /// GjiniaHelpBlockLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GjiniaHelpBlockLabel;
+        
+        /// <summary>
+        /// RoliLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RoliLabel;
+        
+        /// <summary>
+        /// RoliDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList RoliDropDownList;
         
         /// <summary>
         /// CancelButton control.
