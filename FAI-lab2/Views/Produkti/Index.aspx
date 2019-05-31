@@ -59,7 +59,7 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Asset" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="AssetLabel" runat="server" Text='<%# Bind("Asset") %>' />
+                            <asp:Label ID="AssetLabel" runat="server" Text='<%# Bind("Lloji") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Grupi" InsertVisible="False">

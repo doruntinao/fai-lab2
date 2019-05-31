@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class KategoriaMapper
+    public class ObjektiMapper
     {
-        private Kategoria mKategoria;
+        private Objekti mObjekti;
 
-        public KategoriaMapper(Kategoria k)
+        public ObjektiMapper(Objekti o)
         {
-            mKategoria = k;
+            mObjekti = o;
         }
 
         public void Delete()
@@ -23,9 +23,9 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaDeleteRow", con);
+                SqlCommand cmd = new SqlCommand("ObjektiDeleteRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@KategoriaID", mKategoria.KategoriaID);
+                cmd.Parameters.AddWithValue("@ObjektiID", mObjekti.ObjektiID);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -39,9 +39,10 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaInsertRow", con);
+                SqlCommand cmd = new SqlCommand("ObjektiInsertRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@VleraKategorise", mKategoria.Vlera);
+                cmd.Parameters.AddWithValue("@Lokacioni", mObjekti.Lokacioni);
+                cmd.ExecuteNonQuery();
             }
             finally
             {
@@ -54,9 +55,10 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaInsertRow", con);
+                SqlCommand cmd = new SqlCommand("ObjektiUpdateRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@VleraKategorise", mKategoria.Vlera);
+                cmd.Parameters.AddWithValue("@ObjektiID", mObjekti.ObjektiID);
+                cmd.Parameters.AddWithValue("@Lokacioni", mObjekti.Lokacioni);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -65,22 +67,22 @@ namespace DAL
             }
         }
 
-        public void SelectedID(int KategoriaID)
+        public void SelectedID(int ObjektiID)
         {
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaSelectRow", con);
+                SqlCommand cmd = new SqlCommand("ObjektiSelectRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@KategoriaID", KategoriaID);
+                cmd.Parameters.AddWithValue("@ObjektiID", ObjektiID);
 
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    mKategoria.KategoriaID = (int)rdr["KategoriaID"];
+                    mObjekti.ObjektiID = (int)rdr["ObjektiID"];
 
-                    if (rdr["VleraKategoris"] != DBNull.Value)
-                        mKategoria.Vlera = (int)rdr["VleraKategoris"];
+                    if (rdr["Lokacioni"] != DBNull.Value)
+                        mObjekti.Lokacioni = (string)rdr["Lokacioni"];
                 }
             }
             finally

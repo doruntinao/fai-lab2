@@ -47,6 +47,8 @@
     <Compile Include="GrupiMapper.cs" />
     <Compile Include="KategoriaMapper.cs" />
     <Compile Include="KategoritMappers.cs" />
+    <Compile Include="ObjektetMappers.cs" />
+    <Compile Include="ObjektiMapper.cs" />
     <Compile Include="ProduktetMappers.cs" />
     <Compile Include="ProduktiMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

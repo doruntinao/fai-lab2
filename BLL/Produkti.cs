@@ -16,7 +16,7 @@ namespace BLL
         public string Prodhuesi { get; set; }
         public string Modeli { get; set; }
         public int Jetegjatesia { get; set; }
-        public bool Asset { get; set; }
+        public string Lloji { get; set; }
         public int GrupiID { get; set; }
         public bool Statusi { get; set; }
         public string NrSerik { get; set; }

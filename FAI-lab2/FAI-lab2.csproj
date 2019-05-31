@@ -129,6 +129,10 @@
     <Content Include="Views\Grupi\Edit.aspx" />
     <Content Include="Views\Grupi\Index.aspx" />
     <Content Include="Views\Images\calendar.png" />
+    <Content Include="Views\Objekti\Create.aspx" />
+    <Content Include="Views\Objekti\Delete.aspx" />
+    <Content Include="Views\Objekti\Edit.aspx" />
+    <Content Include="Views\Objekti\Index.aspx" />
     <Content Include="Views\Produkti\Delete.aspx" />
     <Content Include="Views\Produkti\Edit.aspx" />
     <Content Include="Views\Produkti\Index.aspx" />
@@ -223,6 +227,34 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Grupi\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Objekti\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Objekti\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Objekti\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Objekti\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Objekti\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Objekti\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Objekti\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Objekti\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Produkti\Delete.aspx.cs">

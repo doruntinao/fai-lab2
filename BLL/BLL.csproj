@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Grupi.cs" />
     <Compile Include="Kategoria.cs" />
+    <Compile Include="Objekti.cs" />
     <Compile Include="Produkti.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

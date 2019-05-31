@@ -93,9 +93,12 @@
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">
-                    <asp:Label ID="AssetLabel" Text="Asset*" runat="server"></asp:Label>
+                    <asp:Label ID="LlojiLabel" Text="Lloji*" runat="server"></asp:Label>
                 </label>
-                <asp:CheckBox ID="AssetCheckBox" Text="A është asset?"  runat="server" />
+                <asp:RadioButtonList ID="llojiProduktit" runat="server">
+                <asp:ListItem id="aset" Text="Aset" Value="Aset" />
+                <asp:ListItem id="inventor" Text="Inventor" Value="Inventor" />
+                </asp:RadioButtonList>
             </div>
             <div class="form-group form-md-line-input">
                 <label class="col-md-3 control-label" for="form_control">

@@ -41,8 +41,8 @@ namespace DAL
                         p.Modeli = (string)rdr["Modeli"];
                     if (rdr["Jetegjatesia"] != DBNull.Value)
                         p.Jetegjatesia = (int)rdr["Jetegjatesia"];
-                    if (rdr["Asset"] != DBNull.Value)
-                        p.Asset = (bool)rdr["Asset"];
+                    if (rdr["Lloji"] != DBNull.Value)
+                        p.Lloji = (string)rdr["Lloji"];
                     if (rdr["GrupiID"] != DBNull.Value)
                         p.GrupiID = (int)rdr["GrupiID"];
                     if (rdr["Statusi"] != DBNull.Value)
