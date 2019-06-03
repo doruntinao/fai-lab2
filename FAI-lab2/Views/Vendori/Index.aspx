@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="FAI_lab2.Views.Grupet.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="FAI_lab2.Views.Vendori.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <div class="portlet box green">
+     <div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">
-                Punetori
+              Vendoret
             </div>
             <div class="caption pull-right">
                 <ul>
                     <li>
                         <i class="fa fa-plus"></i>
-                        <asp:HyperLink ID="ShtoHyperLink" runat="server" Text="Shto Grupin" NavigateUrl="~/Views/Grupet/Create.aspx" CssClass="btn-link"></asp:HyperLink>
+                        <asp:HyperLink ID="ShtoHyperLink" runat="server" Text="Shto Vendorin" NavigateUrl="~/Views/Vendori/Create.aspx" CssClass="btn-link"></asp:HyperLink>
                     </li>
                 </ul>
             </div>
@@ -32,22 +32,33 @@
 
                 <PagerSettings PageButtonCount="20" FirstPageText="Fillimi" LastPageText="Fundi" />
                 <Columns>
-                    <asp:TemplateField HeaderText="Grupi" InsertVisible="False">
+                    <asp:TemplateField HeaderText="Emri" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="GrupiLabel" runat="server" Text='<%# Bind("emriGrupit") %>' />
+                            <asp:Label ID="EmriLabel" runat="server" Text='<%# Bind("Emri") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Kategoria" InsertVisible="False">
+                    <asp:TemplateField HeaderText="Lokacioni" InsertVisible="False">
                         <ItemTemplate>
-                            <asp:Label ID="KategoriaLabel" runat="server" Text='<%# Bind("KategoriaID") %>' />
+                            <asp:Label ID="LokacioniLabel" runat="server" Text='<%# Bind("Lokacioni") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:TemplateField HeaderText="NrKontaktues" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="NrKontaktuesLabel" runat="server" Text='<%# Bind("NrKontaktues") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="BankAccount" InsertVisible="False">
+                        <ItemTemplate>
+                            <asp:Label ID="BankAccountLabel" runat="server" Text='<%# Bind("BankAccount") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
                      <asp:TemplateField HeaderText="" InsertVisible="False">
                     <ItemTemplate>
                              <asp:LinkButton ID="EditButton"
                                 runat="server"
                                 CommandName="EditCommandName"
-                                CommandArgument='<%# Bind("GrupiID") %>'
+                                CommandArgument='<%# Bind("VendoriID") %>'
                                 class="btn btn-primary btn-xs">
                                   Ndrysho
                             </asp:LinkButton>
@@ -58,7 +69,7 @@
                             <asp:LinkButton ID="DeleteButton"
                                 runat="server"
                                 CommandName="DeleteCommandName"
-                                CommandArgument='<%# Bind("GrupiID") %>'
+                                CommandArgument='<%# Bind("VendoriID") %>'
                                 class="btn red-mint btn-xs">
                                   Fshije
                             </asp:LinkButton>

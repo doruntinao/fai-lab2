@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FAI_lab2.Views.Grupet {
+namespace FAI_lab2.Views.Punetorii {
     
     
     public partial class Index {
