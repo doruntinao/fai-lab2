@@ -256,22 +256,40 @@ namespace FAI_lab2.Views.Produkti {
         protected global::System.Web.UI.WebControls.DropDownList GrupiDropDownList;
         
         /// <summary>
-        /// AssetLabel-Steuerelement
+        /// LlojiLabel-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AssetLabel;
+        protected global::System.Web.UI.WebControls.Label LlojiLabel;
         
         /// <summary>
-        /// AssetCheckBox-Steuerelement
+        /// llojiProduktit-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox AssetCheckBox;
+        protected global::System.Web.UI.WebControls.RadioButtonList llojiProduktit;
+        
+        /// <summary>
+        /// aset-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem aset;
+        
+        /// <summary>
+        /// inventor-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem inventor;
         
         /// <summary>
         /// StatusiLabel-Steuerelement

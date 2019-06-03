@@ -40,7 +40,6 @@ namespace FAI_lab2.Views.Produkti
             }
         }
 
-
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             if (EmriTextBox.Text.Length == 0)
@@ -78,6 +77,13 @@ namespace FAI_lab2.Views.Produkti
                 JetegjatesiaTextBox.Focus();
                 return;
             }
+            else if (llojiProduktit.SelectedValue == null)
+            {
+                lblError.Visible = true;
+
+                LlojiLabel.Focus();
+                return;
+            }
             else if (salvageValueTextBox.Text.Length == 0)
             {
                 lblError.Visible = true;
@@ -93,13 +99,13 @@ namespace FAI_lab2.Views.Produkti
                 obj.Prodhuesi = ProdhuesiTextBox.Text;
                 obj.Modeli = ModeliTextBox.Text;
                 obj.Jetegjatesia = Int32.Parse(JetegjatesiaTextBox.Text);
-                obj.Asset = AssetCheckBox.Checked;
+                obj.Lloji = llojiProduktit.SelectedValue; 
                 obj.GrupiID = Int32.Parse(GrupiDropDownList.SelectedItem.Value);
                 obj.Statusi = StatusiCheckBox.Checked;
                 obj.NrSerik = NrSerikTextBox.Text;
                 obj.salvageValue = decimal.Parse(salvageValueTextBox.Text);
                 obj.Cmimi = decimal.Parse(CmimiTextBox.Text);
-                obj.Data1 = Convert.ToDateTime(DataTextBox.Text);
+                obj.Data1 = Convert.ToDateTime(DataTextBox.Text).Date;
                 ProduktiMapper objm = new ProduktiMapper(obj);
                 objm.Insert();
                 Response.Redirect("Index.aspx");

@@ -47,16 +47,11 @@
     <Compile Include="GrupiMapper.cs" />
     <Compile Include="KategoriaMapper.cs" />
     <Compile Include="KategoritMappers.cs" />
-    <Compile Include="KlientetMapper.cs" />
-    <Compile Include="KlientiMapper.cs" />
-    <Compile Include="LoginMapper.cs" />
+    <Compile Include="ObjektetMappers.cs" />
+    <Compile Include="ObjektiMapper.cs" />
     <Compile Include="ProduktetMappers.cs" />
     <Compile Include="ProduktiMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PunetoretMapper.cs" />
-    <Compile Include="PunetoriMapper.cs" />
-    <Compile Include="VendoretMapper.cs" />
-    <Compile Include="VendoriMapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

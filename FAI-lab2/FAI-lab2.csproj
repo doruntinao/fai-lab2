@@ -45,6 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -128,12 +129,10 @@
     <Content Include="Views\Grupi\Edit.aspx" />
     <Content Include="Views\Grupi\Index.aspx" />
     <Content Include="Views\Images\calendar.png" />
-    <Content Include="Views\Klienti\Create.aspx" />
-    <Content Include="Views\Klienti\Delete.aspx" />
-    <Content Include="Views\Klienti\Edit.aspx" />
-    <Content Include="Views\Klienti\Index.aspx" />
-    <Content Include="Views\Login\Index.aspx" />
-    <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\Objekti\Create.aspx" />
+    <Content Include="Views\Objekti\Delete.aspx" />
+    <Content Include="Views\Objekti\Edit.aspx" />
+    <Content Include="Views\Objekti\Index.aspx" />
     <Content Include="Views\Produkti\Delete.aspx" />
     <Content Include="Views\Produkti\Edit.aspx" />
     <Content Include="Views\Produkti\Index.aspx" />
@@ -181,14 +180,6 @@
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\Produkti\Create.aspx" />
-    <Content Include="Views\Punetorii\Create.aspx" />
-    <Content Include="Views\Punetorii\Delete.aspx" />
-    <Content Include="Views\Punetorii\Edit.aspx" />
-    <Content Include="Views\Punetorii\Index.aspx" />
-    <Content Include="Views\Vendori\Create.aspx" />
-    <Content Include="Views\Vendori\Delete.aspx" />
-    <Content Include="Views\Vendori\Edit.aspx" />
-    <Content Include="Views\Vendori\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -238,47 +229,33 @@
     <Compile Include="Views\Grupi\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Klienti\Create.aspx.cs">
+    <Compile Include="Views\Objekti\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Klienti\Create.aspx.designer.cs">
+    <Compile Include="Views\Objekti\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Klienti\Delete.aspx.cs">
+    <Compile Include="Views\Objekti\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Klienti\Delete.aspx.designer.cs">
+    <Compile Include="Views\Objekti\Delete.aspx.designer.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Klienti\Edit.aspx.cs">
+    <Compile Include="Views\Objekti\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Klienti\Edit.aspx.designer.cs">
+    <Compile Include="Views\Objekti\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Klienti\Index.aspx.cs">
+    <Compile Include="Views\Objekti\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Klienti\Index.aspx.designer.cs">
+    <Compile Include="Views\Objekti\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Login\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Login\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Login\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Login\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Produkti\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
@@ -339,62 +316,6 @@
     </Compile>
     <Compile Include="Views\Produkti\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Punetorii\Create.aspx.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Punetorii\Create.aspx.designer.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Punetorii\Delete.aspx.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Punetorii\Delete.aspx.designer.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Punetorii\Edit.aspx.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Punetorii\Edit.aspx.designer.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Punetorii\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Punetorii\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Vendori\Create.aspx.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Vendori\Create.aspx.designer.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Vendori\Delete.aspx.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Vendori\Delete.aspx.designer.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Vendori\Edit.aspx.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Vendori\Edit.aspx.designer.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Vendori\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Vendori\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

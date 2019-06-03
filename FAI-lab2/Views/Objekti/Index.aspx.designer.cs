@@ -7,18 +7,27 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace FAI_lab2 {
+namespace FAI_lab2.Views.Objekti {
     
     
-    public partial class SiteMaster {
+    public partial class Index {
         
         /// <summary>
-        /// MainContent-Steuerelement
+        /// ShtoHyperLink-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.HyperLink ShtoHyperLink;
+        
+        /// <summary>
+        /// ListGridView-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ListGridView;
     }
 }

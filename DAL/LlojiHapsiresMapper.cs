@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class KategoriaMapper
+    public class LLojiHapsiresMapper
     {
-        private Kategoria mKategoria;
+        private LlojiHapsires mLLojiHapsires;
 
-        public KategoriaMapper(Kategoria k)
+
+        public LLojiHapsiresMapper(LlojiHapsires o)
         {
-            mKategoria = k;
+            mLLojiHapsires = o;
         }
 
         public void Delete()
@@ -23,9 +24,9 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaDeleteRow", con);
+                SqlCommand cmd = new SqlCommand("LLojiHapsiresDeleteRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@KategoriaID", mKategoria.KategoriaID);
+                cmd.Parameters.AddWithValue("@LLojiID",mLLojiHapsires.LlojiID);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -39,9 +40,10 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaInsertRow", con);
+                SqlCommand cmd = new SqlCommand("LLojiHapsiresInsertRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@VleraKategorise", mKategoria.Vlera);
+                cmd.Parameters.AddWithValue("@Lloji", mLLojiHapsires.Lloji);
+                cmd.ExecuteNonQuery();
             }
             finally
             {
@@ -54,9 +56,10 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaInsertRow", con);
+                SqlCommand cmd = new SqlCommand("LLojiHapsiresUpdateRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@VleraKategorise", mKategoria.Vlera);
+                cmd.Parameters.AddWithValue("@LLlojiID", mLLojiHapsires.LlojiID);
+                cmd.Parameters.AddWithValue("@Lloji", mLLojiHapsires.Lloji);
                 cmd.ExecuteNonQuery();
             }
             finally
@@ -65,22 +68,22 @@ namespace DAL
             }
         }
 
-        public void SelectedID(int KategoriaID)
+        public void SelectedID(int LlojiID)
         {
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaSelectRow", con);
+                SqlCommand cmd = new SqlCommand("LLojiHapsiresSelectRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@KategoriaID", KategoriaID);
+                cmd.Parameters.AddWithValue("@LlojiID", LlojiID);
 
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    mKategoria.KategoriaID = (int)rdr["KategoriaID"];
+                    mLLojiHapsires.LlojiID = (int)rdr["LLojiID"];
 
-                    if (rdr["VleraKategoris"] != DBNull.Value)
-                        mKategoria.Vlera = (int)rdr["VleraKategoris"];
+                    if (rdr["Lloji"] != DBNull.Value)
+                        mLLojiHapsires.Lloji = (string)rdr["Lloji"];
                 }
             }
             finally
@@ -90,3 +93,4 @@ namespace DAL
         }
     }
 }
+

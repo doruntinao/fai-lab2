@@ -2,6 +2,7 @@
 using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,9 +15,30 @@ namespace FAI_lab2.Views.Produkti
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
+            {
                 placeShenimet();
+                GrupiDLL();
+            }
         }
 
+        private void GrupiDLL()
+        {
+            SqlConnection con = Generals.GetNewConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Select GrupiID, Grupi from Grupi", con);
+                SqlDataReader rdr = cmd.ExecuteReader();
+                GrupiDropDownList.DataTextField = "Grupi";
+                GrupiDropDownList.DataValueField = "GrupiID";
+                GrupiDropDownList.DataSource = rdr;
+                GrupiDropDownList.DataBind();
+                GrupiDropDownList.Items.Insert(0, "Selekto Grupin");
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
         private void placeShenimet()
         {
@@ -33,11 +55,13 @@ namespace FAI_lab2.Views.Produkti
             ProdhuesiTextBox.Text = ex.Prodhuesi;
             ModeliTextBox.Text = ex.Modeli;
             JetegjatesiaTextBox.Text = ex.Jetegjatesia.ToString();
-            AssetCheckBox.Checked = ex.Asset;
             GrupiDropDownList.SelectedValue = ex.GrupiID.ToString();
             StatusiCheckBox.Checked = ex.Statusi;
+            NrSerikTextBox.Text = ex.NrSerik;
+            llojiProduktit.SelectedValue = ex.Lloji;
             salvageValueTextBox.Text = ex.salvageValue.ToString();
             CmimiTextBox.Text = ex.Cmimi.ToString();
+            DataTextBox.Text = ex.Data1.ToString("d");
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -77,6 +101,13 @@ namespace FAI_lab2.Views.Produkti
                 JetegjatesiaTextBox.Focus();
                 return;
             }
+            else if (llojiProduktit.SelectedValue == null)
+            {
+                lblError.Visible = true;
+
+                LlojiLabel.Focus();
+                return;
+            }
             else if (salvageValueTextBox.Text.Length == 0)
             {
                 lblError.Visible = true;
@@ -97,13 +128,13 @@ namespace FAI_lab2.Views.Produkti
                 ex.Prodhuesi = ProdhuesiTextBox.Text;
                 ex.Modeli = ModeliTextBox.Text;
                 ex.Jetegjatesia = Int32.Parse(JetegjatesiaTextBox.Text);
-                ex.Asset = AssetCheckBox.Checked;
+                ex.Lloji = llojiProduktit.SelectedValue;
                 ex.NrSerik = NrSerikTextBox.Text;
                 ex.GrupiID = Int32.Parse(GrupiDropDownList.DataValueField);
                 ex.Statusi = StatusiCheckBox.Checked;
                 ex.salvageValue = decimal.Parse(salvageValueTextBox.Text);
                 ex.Cmimi = decimal.Parse(CmimiTextBox.Text);
-                ex.Data1 = Convert.ToDateTime(DataTextBox.Text);
+                ex.Data1 = Convert.ToDateTime(DataTextBox.Text).Date;
 
                 em.Update();
                 Response.Redirect("Index.aspx");
@@ -114,6 +145,33 @@ namespace FAI_lab2.Views.Produkti
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            if (Calendar1.Visible)
+            {
+                Calendar1.Visible = false;
+            }
+            else
+            {
+                Calendar1.Visible = true;
+            }
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            DataTextBox.Text = Calendar1.SelectedDate.ToString("d");
+            Calendar1.Visible = false;
+        }
+
+        protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.IsOtherMonth)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }

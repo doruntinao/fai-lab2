@@ -46,7 +46,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@Prodhuesi", mProdukti.Prodhuesi);
                 cmd.Parameters.AddWithValue("@Modeli", mProdukti.Modeli);
                 cmd.Parameters.AddWithValue("@Jetegjatesia", mProdukti.Jetegjatesia);
-                cmd.Parameters.AddWithValue("@Asset", mProdukti.Asset);
+                cmd.Parameters.AddWithValue("@Lloji", mProdukti.Lloji);
                 cmd.Parameters.AddWithValue("@GrupiID", mProdukti.GrupiID);
                 cmd.Parameters.AddWithValue("@Statusi", mProdukti.Statusi);
                 cmd.Parameters.AddWithValue("@NrSerik", mProdukti.NrSerik);
@@ -66,14 +66,14 @@ namespace DAL
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("ProduktiInsertRow", con);
+                SqlCommand cmd = new SqlCommand("ProduktiUpdateRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Emri", mProdukti.Emri);
                 cmd.Parameters.AddWithValue("@Pershkrimi", mProdukti.Pershkrimi);
                 cmd.Parameters.AddWithValue("@Prodhuesi", mProdukti.Prodhuesi);
                 cmd.Parameters.AddWithValue("@Modeli", mProdukti.Modeli);
                 cmd.Parameters.AddWithValue("@Jetegjatesia", mProdukti.Jetegjatesia);
-                cmd.Parameters.AddWithValue("@Asset", mProdukti.Asset);
+                cmd.Parameters.AddWithValue("@Lloji", mProdukti.Lloji);
                 cmd.Parameters.AddWithValue("@GrupiID", mProdukti.GrupiID);
                 cmd.Parameters.AddWithValue("@Statusi", mProdukti.Statusi);
                 cmd.Parameters.AddWithValue("@NrSerik", mProdukti.NrSerik);
@@ -112,8 +112,8 @@ namespace DAL
                         mProdukti.Modeli = (string)rdr["Modeli"];
                     if (rdr["Jetegjatesia"] != DBNull.Value)
                         mProdukti.Jetegjatesia = (int)rdr["Jetegjatesia"];
-                    if (rdr["Asset"] != DBNull.Value)
-                        mProdukti.Asset = (bool)rdr["Asset"];
+                    if (rdr["Lloji"] != DBNull.Value)
+                        mProdukti.Lloji = (string)rdr["Lloji"];
                     if (rdr["GrupiID"] != DBNull.Value)
                         mProdukti.GrupiID = (int)rdr["GrupiID"];
                     if (rdr["Statusi"] != DBNull.Value)

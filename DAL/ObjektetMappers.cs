@@ -9,29 +9,30 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class KategoritMappers
+    public class ObjektetMappers
     {
-        private List<Kategoria> mKategorit;
+        private List<Objekti> mObjektet;
 
-        public KategoritMappers(List<Kategoria> k)
+        public ObjektetMappers(List<Objekti> o)
         {
-            mKategorit = k;
+            mObjektet = o;
         }
 
-        public void SelectAllKategorit()
+        public void SelectAllObjektet()
         {
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("KategoriaSelectAll", con);
+                SqlCommand cmd = new SqlCommand("ObjektiSelectAll", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    Kategoria k = new Kategoria();
-                    k.KategoriaID = (int)rdr["KategoriaID"];
-                    if (rdr["vleraKategorise"] != DBNull.Value)
-                        k.Vlera = (int)rdr["vleraKategorise"];
+                    Objekti o = new Objekti();
+                    o.ObjektiID = (int)rdr["ObjektiID"];
+                    if (rdr["Lokacioni"] != DBNull.Value)
+                        o.Lokacioni = (string)rdr["Lokacioni"];
+                    mObjektet.Add(o);
                 }
             }
             finally
