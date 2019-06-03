@@ -1,20 +1,19 @@
-﻿using BLL;
+﻿using System;
 using DAL;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace FAI_lab2.Views.Punetorii
+namespace FAI_lab2.Views.Vendori
 {
     public partial class Index : System.Web.UI.Page
     {
         public int SelectedID { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            placeShenimet();   
+            placeShenimet();
         }
         protected void ListGridView_DataBound(object sender, EventArgs e)
         {
@@ -33,10 +32,10 @@ namespace FAI_lab2.Views.Punetorii
 
         private void placeShenimet()
         {
-            List<BLL.Punetori> lp = new List<BLL.Punetori>();
-            PunetoretMapper bm = new PunetoretMapper(lp);
-            bm.SelectAllPunetoret();
-            ListGridView.DataSource = lp;
+            List<BLL.Vendori> lv = new List<BLL.Vendori>();
+            VendoretMapper vm = new VendoretMapper(lv);
+            vm.SelectAllVendori();
+            ListGridView.DataSource = lv;
             ListGridView.DataBind();
         }
         protected void ListGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -46,12 +45,7 @@ namespace FAI_lab2.Views.Punetorii
         }
         protected void ListGridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            //if (e.CommandName == "ViewCommandName")
-            //{
-            //    SelectedID = Convert.ToInt32(e.CommandArgument.ToString());
-            //    Server.Transfer("View.aspx");
 
-            //}
             if (e.CommandName == "EditCommandName")
             {
                 SelectedID = Convert.ToInt32(e.CommandArgument.ToString());
@@ -60,8 +54,8 @@ namespace FAI_lab2.Views.Punetorii
             else if (e.CommandName == "DeleteCommandName")
             {
                 Session["DeletedID"] = Convert.ToInt32(e.CommandArgument.ToString());
-                Session["PreviousPageName"] = "/Views/Punetorii/" + System.IO.Path.GetFileName(Page.Request.FilePath);
-                Server.Transfer("DeleteForm.aspx");
+                Session["PreviousPageName"] = "/Views/Vendori/" + System.IO.Path.GetFileName(Page.Request.FilePath);
+                Server.Transfer("Delete.aspx");
             }
         }
     }

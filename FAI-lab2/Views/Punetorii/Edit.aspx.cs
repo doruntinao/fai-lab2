@@ -17,12 +17,25 @@ namespace FAI_lab2.Views.Punetorii
             {
                 if (!IsPostBack)
                 {
-                    PunetoriiDLL();
+                placeShenimet();
+              
                 }
             }
-        
-   
-            private void PunetoriiDLL()
+        private void placeShenimet()
+        {
+            Index form = (Index)Context.Handler;
+            int ID = form.SelectedID;
+            ViewState["SelectedID"] = ID;
+            PunetoriiDLL();
+
+
+            BLL.Punetori ex = new BLL.Punetori();
+            PunetoriMapper em = new PunetoriMapper(ex);
+            em.SelectedID(ID);
+        }
+
+
+        private void PunetoriiDLL()
             {
                 SqlConnection con = Generals.GetNewConnection();
                 try
@@ -65,14 +78,19 @@ namespace FAI_lab2.Views.Punetorii
             }
             else
                 {
+                int ID = Convert.ToInt32(ViewState["SelectedID"].ToString());
                     BLL.Punetori obj = new BLL.Punetori();
-                    obj.Emri = EmriTextBox.Text;
+                PunetoriMapper objm = new PunetoriMapper(obj);
+                    objm.SelectedID(ID);
+
+
+
+                obj.Emri = EmriTextBox.Text;
                     obj.Mbiemri = MbiemriTextBox.Text;
                     obj.Gjinia = GjiniaTextBox.Text;
                     obj.RoliID = Int32.Parse(RoliDropDownList.SelectedItem.Value);
 
-                    PunetoriMapper objm = new PunetoriMapper(obj);
-                    objm.Insert();
+                    objm.Update();
                     Response.Redirect("Index.aspx");
                 }
             }

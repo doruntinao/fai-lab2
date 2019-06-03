@@ -55,13 +55,14 @@ namespace DAL
             }
         }
 
-        public void Update()
+        public void Update() // Perditsim i te dhenave
         {
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("PunetoriInsertRow", con);
+                SqlCommand cmd = new SqlCommand("PunetoriUpdateRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@PunetoriID", mPunetori.PunetoriID);
                 cmd.Parameters.AddWithValue("@Emri", mPunetori.Emri);
                 cmd.Parameters.AddWithValue("@Mbiemri", mPunetori.Mbiemri);
                 cmd.Parameters.AddWithValue("@Gjinia", mPunetori.Gjinia);
@@ -74,19 +75,19 @@ namespace DAL
             }
         }
 
-        public void SelectedID(int PunetoriID)
-        {
+        public void SelectedID(int PunetoriID) // Opsion i select id 
+        {   
             SqlConnection con = Generals.GetNewConnection();
             try
             {
                 SqlCommand cmd = new SqlCommand("PunetoriSelectRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Punetori", PunetoriID);
+                cmd.Parameters.AddWithValue("@PunetoriID", PunetoriID);
 
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    mPunetori.PunetoriID = (int)rdr["ProduktiID"];
+                    mPunetori.PunetoriID = (int)rdr["PunetoriID"];
 
                     if (rdr["Emri"] != DBNull.Value)
                         mPunetori.Emri = (string)rdr["Emri"];

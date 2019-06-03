@@ -7,19 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LabCourse2
+using System.Collections.Generic;
+
+namespace BLL
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class Login
+    public class Login
     {
         public int LID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public List<int> PunetoriID { get; set; }
-        public string Statusi { get; set; }
     
-        public virtual Punetori Punetori { get; set; }
+
     }
 }
