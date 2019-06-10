@@ -131,6 +131,10 @@
     <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Views\Klientet\Create.aspx" />
+    <Content Include="Views\Klientet\Delete.aspx" />
+    <Content Include="Views\Klientet\Edit.aspx" />
+    <Content Include="Views\Klientet\Index.aspx" />
     <Content Include="Views\Mirembajtje\PunetoriService.asmx" />
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery.js" />
@@ -139,10 +143,6 @@
     <Content Include="Views\Grupet\Edit.aspx" />
     <Content Include="Views\Grupet\Index.aspx" />
     <Content Include="Views\Images\calendar.png" />
-    <Content Include="Views\Klienti\Create.aspx" />
-    <Content Include="Views\Klienti\Delete.aspx" />
-    <Content Include="Views\Klienti\Edit.aspx" />
-    <Content Include="Views\Klienti\Index.aspx" />
     <Content Include="Views\Login\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\Mirembajtje\Create.aspx" />
@@ -235,6 +235,7 @@
     <Compile Include="Controllers\KlientetMapper.cs" />
     <Compile Include="Controllers\KlientiMapper.cs" />
     <Compile Include="Controllers\LoginMapper.cs" />
+    <Compile Include="Controllers\MirembajtjaMapper.cs" />
     <Compile Include="Controllers\ObjektetMappers.cs" />
     <Compile Include="Controllers\ObjektiMapper.cs" />
     <Compile Include="Controllers\ProduktetMappers.cs" />
@@ -252,6 +253,34 @@
     <Compile Include="Models\Produkti.cs" />
     <Compile Include="Models\Punetori.cs" />
     <Compile Include="Models\Vendori.cs" />
+    <Compile Include="Views\Klientet\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Klientet\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Klientet\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Klientet\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Klientet\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Klientet\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Klientet\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Klientet\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Mirembajtje\PunetoriService.asmx.cs">
       <DependentUpon>PunetoriService.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -282,34 +311,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Grupet\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Klienti\Create.aspx.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Klienti\Create.aspx.designer.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Klienti\Delete.aspx.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Klienti\Delete.aspx.designer.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Klienti\Edit.aspx.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Klienti\Edit.aspx.designer.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Klienti\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Klienti\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login\Index.aspx.cs">
@@ -492,6 +493,8 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Klientet\Delete.aspx.designer.cs~b08ecf627ad8104d43389b5d4d60d29a3c931c4e" />
+    <Content Include="Views\Klientet\Index.aspx.designer.cs~b08ecf627ad8104d43389b5d4d60d29a3c931c4e" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

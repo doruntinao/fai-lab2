@@ -56,7 +56,7 @@ namespace FAI_lab2.Controllers
             SqlConnection con = Generals.GetNewConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand("GrupiInsertRow", con);
+                SqlCommand cmd = new SqlCommand("GrupiUpdateRow", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Grupi", mGrupi.emriGrupit);
                 cmd.Parameters.AddWithValue("@KategoriaID", mGrupi.KategoriaID);

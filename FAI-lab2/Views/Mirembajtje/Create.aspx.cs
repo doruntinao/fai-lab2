@@ -6,14 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FAI_lab2.Controllers;
-using FAI_lab2.Models;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace FAI_lab2.Views.Mirembajtje
 {
     public partial class Create : System.Web.UI.Page
     {
-        int id;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -21,14 +21,30 @@ namespace FAI_lab2.Views.Mirembajtje
                 placeShenimet();
             }
         }
+        public int PunetoriID(String emriMbiemri)
+        {
+            int p = 0;
+            string q = "SELECT * FROM Punetori WHERE Emri + ' ' + Mbiemri ="+" '"+emriMbiemri+"'";
+            string cs = ConfigurationManager.ConnectionStrings["FAI_Connection"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                SqlCommand cmd = new SqlCommand(q, con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                        p = (int)rdr["PunetoriID"];
+                }
+            }
+            return p;
+        }
 
         public void placeShenimet()
         {
             Index form = (Index)Context.Handler;
             int ID = form.SelectedID;
-            id = form.SelectedID;
+            Session.Add("ID", form.SelectedID);
             ViewState["SelectedID"] = ID;
-
             List<Produkti> ex = new List<Produkti>();
             ProduktetMappers em = new ProduktetMappers(ex);
             em.SelectedID(ID);
@@ -56,10 +72,17 @@ namespace FAI_lab2.Views.Mirembajtje
             else
             {
                 Mirembajtja obj = new Mirembajtja();
+                int id = (int)Session["ID"];
+
                 obj.DataMirembajtjes = DateTime.Now;
                 obj.Pershkrimi = MessageTextBox.Text;
                 obj.ProduktiID = id;
-               // obj.PunetoriID = ps.punetoriID;
+                obj.PunetoriID = PunetoriID(ContactTextBox.Text);
+
+                MirembajtjaMapper objm = new MirembajtjaMapper(obj);
+                objm.Insert();
+                Response.Redirect("Index.aspx");
+
             }
         }
 
